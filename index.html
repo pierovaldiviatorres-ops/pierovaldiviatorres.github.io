@@ -3,136 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piero Valdivia Torres - Presentación Personal</title>
+    <title>Piero Valdivia Torres - Currículum Web</title>
+
     <style>
-        /* === VARIABLES CSS (Nuevas para fácil cambio de color) === */
         :root {
-            --primary-color: #007BFF; /* Azul profesional */
-            --secondary-color: #6c757d; /* Gris para textos secundarios */
-            --background-color: #f8f9fa; /* Fondo muy claro */
-            --text-color: #343a40; /* Texto oscuro */
-        }
-        
-        /* === ESTILOS GENERALES === */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 40px 20px; /* Más espacio */
-            color: var(--text-color);
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px; /* Esquinas más suaves */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra más definida */
+            --primary:#005eff;
+            --secondary:#6c757d;
+            --light:#f7f9fc;
+            --dark:#1f1f1f;
+            --accent:#ffc107;
         }
 
-        /* === TÍTULOS === */
-        h1 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            border-bottom: 3px solid var(--primary-color); /* Línea de color */
-            padding-bottom: 15px;
-        }
-        h2 { /* Estilo para las nuevas secciones */
-            color: var(--primary-color);
-            border-left: 5px solid #ffc107; /* Un toque de color amarillo */
-            padding-left: 10px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+        body{
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:#e9eef5;
+            margin:0; padding:0;
+            color:var(--dark);
         }
 
-        /* === PÁRRAFOS Y TEXTO === */
-        p {
-            line-height: 1.7; 
-            font-size: 17px;
-            margin-bottom: 20px;
+        /* ===== NAV CV ===== */
+        nav{
+            background:white;
+            box-shadow:0 2px 15px rgba(0,0,0,.12);
+            padding:10px 30px;
+            position:sticky; top:0;
+            z-index:100;
         }
-        p strong {
-            color: #28a745; /* Destacar texto importante con un color verde */
+        nav ul{
+            list-style:none; display:flex; gap:20px;
+            justify-content:center; margin:0; padding:0;
         }
+        nav a{
+            text-decoration:none; font-weight:600; color:var(--dark);
+            padding:6px 12px; border-radius:4px;
+        }
+        nav a:hover{ background:var(--primary); color:#fff; transition:.3s; }
 
-        /* === LISTA DE HABILIDADES (Nueva Sección) === */
-        .skills-list {
-            list-style: none; /* Quitar el punto por defecto */
-            padding: 0;
-            display: flex; /* Para ponerlas en una fila */
-            flex-wrap: wrap;
-            gap: 15px; /* Espacio entre los elementos */
+        /* ===== CONTENEDOR ===== */
+        .container{
+            width:900px; max-width:92%;
+            margin:40px auto; background:white;
+            padding:50px; border-radius:16px;
+            box-shadow:0 10px 35px rgba(0,0,0,.15);
         }
-        .skills-list li {
-            background-color: #e9ecef;
-            color: var(--text-color);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 15px;
-            font-weight: bold;
+        h1{text-align:center;font-size:36px;color:var(--primary);}
+        h2{
+            font-size:22px; color:var(--primary);
+            padding-left:12px; border-left:6px solid var(--accent);
+            margin-top:40px;
         }
-        .skills-list li:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transition: 0.3s;
-            cursor: default;
-        }
+        p{font-size:17px; line-height:1.6;}
 
-        /* === PIE DE PÁGINA === */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 15px;
-            border-top: 1px solid #dee2e6;
-            color: var(--secondary-color);
-            font-size: 14px;
+        /* ===== LISTAS Y SKILLS ===== */
+        ul.skills{
+            list-style:none; display:flex; flex-wrap:wrap;
+            gap:12px; padding:0; margin-top:10px;
         }
+        ul.skills li{
+            background:#edf1f5; padding:8px 18px; border-radius:30px;
+            font-weight:bold; font-size:15px;
+        }
+        ul.skills li:hover{ background:var(--primary); color:white; transition:.3s; cursor:default;}
+
+        /* ===== LINKS NETWORK ===== */
+        .link-card{
+            background:#f4f7fc;
+            padding:14px 18px;
+            border-left:5px solid var(--primary);
+            border-radius:6px;
+            margin-bottom:10px;
+        }
+        .link-card a{
+            font-weight:bold; text-decoration:none; color:var(--primary);
+        }
+        .link-card:hover{ background:#e1e8ff; transition:.3s; }
+
+        /* ===== FOOTER ===== */
+        .footer{ text-align:center;margin-top:50px;padding:14px;color:var(--secondary);}
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Piero Valdivia Torres</h1>
-        
-        <div style="text-align: center; margin-bottom: 30px;">
-            <img src="perfil.jpg" alt="Foto de Perfil de Piero Valdivia Torres" 
-                 style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid var(--primary-color);">
-            <p style="font-size: 14px; margin-top: 10px; color: var(--secondary-color);">Estudiante de Administración de Empresas</p>
-        </div>
-        <h2>👋 Presentación</h2>
-        <p>¡Hola! Mi nombre es <strong>Piero Valdivia Torres</strong>. Tengo 19 años y actualmente estudio 
-        <strong>Administración de Empresas</strong> en la <strong>Universidad Católica San Pablo</strong>.</p>
+<nav>
+    <ul>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#objetivo">Objetivo Profesional</a></li>
+        <li><a href="#habilidades">Competencias</a></li>
+        <li><a href="#pasatiempos">Intereses</a></li>
+        <li><a href="#networking">Networking</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
 
-        <h2>🎯 Mi Objetivo</h2>
-        <p>Me considero una persona responsable, motivada y con un interés creciente por el mundo empresarial. 
-        Mi objetivo profesional es adquirir las herramientas necesarias para poder, en un futuro, 
-        <strong>crear y dirigir mi propia empresa</strong>.</p>
+<div class="container">
 
-        <h2>💡 Habilidades e Intereses</h2>
-        <ul class="skills-list">
-            <li>Liderazgo</li>
-            <li>Gestión de Proyectos</li>
-            <li>Trabajo en Equipo</li>
-            <li>Análisis de Datos</li>
-            <li>Marketing Digital</li>
-            <li>Fútbol</li>
-            <li>MMA</li>
-        </ul>
-        
-        <h2>🎮 Pasatiempos</h2>
-        <p>Entre mis pasatiempos se encuentran practicar <strong>fútbol</strong>, entrenar 
-        <strong>MMA</strong>, jugar videojuegos como <em>Clash Royale</em> y asistir al <strong>gimnasio</strong>, 
-        actividades que me ayudan a mantener un balance entre mis estudios y mi bienestar personal.</p>
+    <h1 id="perfil">Piero Valdivia Torres</h1>
+    <p><strong>Edad:</strong> 19 años<br>
+    <strong>Estudios:</strong> Administración de Empresas<br>
+    <strong>Universidad:</strong> Universidad Católica San Pablo</p>
 
-        <p style="font-size: 15px; color: var(--secondary-color); text-align: center; border-top: 1px dashed #dee2e6; padding-top: 15px;">
-            Esta página ha sido creada como parte del curso de **Pensamiento Computacional** con el objetivo de presentarme y compartir mis intereses y metas.
-        </p>
-
-        <div class="footer">
-            © 2025 - Piero Valdivia Torres
-        </div>
+    <!-- 🔗 Tu Perfil -->
+    <div class="link-card">
+        🔗 <a href="https://www.linkedin.com/in/piero-humberto-valdivia-torres-084b54385/" target="_blank">
+        Mi perfil de LinkedIn</a>
     </div>
+
+    <h2 id="objetivo">🎯 Objetivo Profesional</h2>
+    <p>Soy una persona proactiva y orientada a resultados. Busco adquirir conocimientos y experiencia para 
+       en el futuro <strong>fundar y dirigir mi propia empresa</strong>.</p>
+
+    <h2 id="habilidades">💡 Competencias y Habilidades</h2>
+    <ul class="skills">
+        <li>Liderazgo</li><li>Gestión de Proyectos</li><li>Trabajo en Equipo</li>
+        <li>Análisis de Datos</li><li>Marketing Digital</li>
+        <li>Responsabilidad</li><li>Comunicación</li>
+    </ul>
+
+    <h2 id="pasatiempos">🎮 Intereses Personales</h2>
+    <p>Practico <strong>fútbol</strong>, entreno <strong>MMA</strong>, juego <em>Clash Royale</em> y voy al <strong>gimnasio</strong>. 
+    Actividades que mantienen mi balance personal.</p>
+
+    <h2 id="networking">👥 Networking Profesional</h2>
+    <p>Personas con las que comparto aprendizaje, crecimiento y proyección futura:</p>
+
+    <div class="link-card">🔗 <a href="https://www.linkedin.com/in/daniela-m-cordova-04635736b/?originalSubdomain=pe" target="_blank">Daniela M. Córdova</a></div>
+    <div class="link-card">🔗 <a href="https://www.linkedin.com/in/sofia-rodriguez-delgado-a056a9385/?originalSubdomain=pe" target="_blank">Sofía Rodríguez Delgado</a></div>
+    <div class="link-card">🔗 <a href="https://www.linkedin.com/in/fátima-antonella-cruz-talavera-0b99b2356/?originalSubdomain=pe" target="_blank">Fátima Antonella Cruz Talavera</a></div>
+
+    <h2 id="contacto">📩 Contacto Directo</h2>
+    <p><strong>Email:</strong> tucorreo@gmail.com <br>
+       <strong>WhatsApp:</strong> +51 TuNúmero <br>
+       <strong>LinkedIn:</strong> Perfil añadido arriba ☝</p>
+
+    <div class="footer">© 2025 - Curriculum digital desarrollado por Piero Valdivia</div>
+</div>
 
 </body>
 </html>
